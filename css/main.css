@@ -27,7 +27,7 @@ h1	{
 }
 
 h2	{
-	font-size: 1.4em;
+	font-size: 1.35em;
 }
 
 h3	{
@@ -52,7 +52,7 @@ header	{
 	background: #7171C6;
 	height: 60px;
 	width: 100%;
-	padding: 0 8px;
+	padding: 0 .5em;
 	color: #eee;
 }
 
@@ -70,7 +70,7 @@ h1.app-name span	{
 
 .notification-icon	{
 	width: 40px;
-	margin: 5px;
+	margin: .3em;
 }
 
 .avatar	{
@@ -84,13 +84,13 @@ h1.app-name span	{
 .avatar-img	{
 	width: 100%;
 	max-width: 60px;
-	padding: 5px;
+	padding: .3em;
 	border-radius: 50%;
 }
 
 .avatar-name	{
 	align-self: center;
-	margin: 5px;
+	margin: .35rem;
 }
 
 
@@ -120,7 +120,7 @@ nav	{
 	width: 100%;
 	max-height: 60px;
 	margin: 0;
-	padding: 10px 5px;
+	padding: .75em .5em;
 }
 
 /* ---- searchbox ----*/
@@ -130,9 +130,9 @@ nav	{
 }
 
 .h1-searchbox input	{
-	border-radius: 5px;
+	border-radius: .5em;
 	border: 1px solid #ccc;
-	padding: 10px 15px;
+	padding: .9em 1em;
 	width: 280px;
 }
 
@@ -161,19 +161,7 @@ nav	{
 	max-height: 100px;
 }
 
-/* -----NEW MEMBERS AND RECENT ACTIVITY----- */
 
-.new-members article,
-.recent-activity article	{
-	text-align: center;
-}
-
-.new-members article img,
-.recent-activity article img	{
-	border-radius: 50%;
-	width: 100%;
-	max-width: 60px;
-}
 
 /* -----MESSAGE USER AND SETTINGS -----*/
 
@@ -218,6 +206,10 @@ nav	{
 	border: none;
 }
 
+.settings	{
+	border-top: 1px solid #ccc;
+}
+
 .settings button[type="reset"]	{
 	background: #7a8a4c;
 	color: #fff;
@@ -236,6 +228,7 @@ nav	{
 @media (min-width: 768px)	{
 	
 	/* BASE -----*/
+	
 	.wrap	{
 		flex-direction: row;
 	}
@@ -280,5 +273,42 @@ nav	{
 		display: flex;
 		align-items: center;
 	}
-	
+	/* -----NEW MEMBERS AND RECENT ACTIVITY----- */
+
+	.members-activity	{
+		display: flex;
+		justify-content: space-around;
+		text-align: left;
+	}
+
+	.new-members article,
+	.recent-activity article	{
+		text-align: center;
+		border-bottom: 1px solid #ccc;
+		display: flex;
+		align-items: center;
+		align-content: center;
+		text-align: left;
+		padding: 1em;
+	}
+
+	.new-members article h3	{
+		font-size: 1em;
+	}
+
+	.new-members article span,
+	.recent-activity article span	{
+		margin-left: auto;
+	}
+
+	.recent-activity article span	{
+		padding: 10px;
+	}
+
+	.new-members article img,
+	.recent-activity article img	{
+		border-radius: 50%;
+		width: 60px;
+		height: 60px;
+	}
 }
