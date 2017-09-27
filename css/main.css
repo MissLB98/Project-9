@@ -16,8 +16,7 @@ body	{
 }
 
 h1,
-h2,
-h3	{
+h2	{
 	text-align: center;
 	color: #666;
 }
@@ -28,10 +27,7 @@ h1	{
 
 h2	{
 	font-size: 1.35em;
-}
-
-h3	{
-	font-size: 1.2em;
+	margin-bottom: 0;
 }
 
 .wrap	{
@@ -114,6 +110,12 @@ nav	{
 	flex: 1;
 	margin: 0;
 	padding: 0;
+	transition: border-bottom .3s, background .4s;
+}
+
+.link:hover	{
+	border-bottom: 3px solid #eea945;
+	background: #7f9a77;
 }
 
 .link svg	{
@@ -136,8 +138,59 @@ nav	{
 	width: 280px;
 }
 
+/* -----ALERTmessage----- */
+
+#alert	{
+	margin: 0 auto;
+	width: 100%;
+	max-width: 1000px;
+}
+
+.alert-box	{
+	background: #9393C6;
+	padding: 8px;
+	margin: 10px;
+	border-radius: 8px;
+	color: #fff;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.alert-box p	{
+	margin: 0;
+}
+
+.cancel-button	{
+	font-size: 1.5em;
+	padding: 6px;
+	border: 2px solid #fff;
+	transition: background .3s, transform .3s;
+	width: 40px;
+	text-align: center;
+}
+
+.cancel-button:hover,
+.cancel-button:active,
+.cancel-button:focus	{
+	background: #000;
+	transform: scale(1.2);
+}
+
 /* ----- SOCIAL STATS -----*/
 
+/* SOCIAL-STATS -----*/
+	
+.social-stats	{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+}
+
+.social-stats > *	{
+	display: flex;
+	align-items: center;
+}
 
 .social-stats h3	{
 	margin: 0;
@@ -161,12 +214,48 @@ nav	{
 	max-height: 100px;
 }
 
+/* -----NEW MEMBERS AND RECENT ACTIVITY----- */
 
+/*The containers for the new members 
+	recent activity.*/
+.new-members,
+.recent-activity	{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	text-align: center;
+}
+
+/*This is the articles.*/
+.new-member-item,
+.recent-activity-item	{
+	flex: 1 50%;
+	padding: 10px;
+	border: 1px solid #ccc;
+}
+
+.new-member-item img,
+.recent-activity-item img	{
+	border-radius: 100%;
+	width: 90px;
+}
+
+.new-member-item p a	{
+	display: block;
+	margin: 0 auto;
+	text-decoration: none;
+}
+
+.recent-activity-item span	{
+	font-size: 2em;
+	margin-left: auto;
+}
 
 /* -----MESSAGE USER AND SETTINGS -----*/
 
 .message-user-settings	{
 	border: 1px solid #ccc;
+	margin: 10px auto;
 }
 
 .message-user,
@@ -244,13 +333,13 @@ nav	{
 	
 	main	{
 		margin: 0;
-		padding: 5px;
 		width: 100%;
 	}
 	
 	/* h1-SEARCHBOX -----*/
 	.h1-searchbox	{
 		display: flex;
+		padding: 15px;
 	}
 	
 	.h1-searchbox h1	{
@@ -262,53 +351,68 @@ nav	{
 		margin-left: auto;
 	}
 	
-	/* SOCIAL-STATS -----*/
-	
-	.social-stats	{
-		display: flex;
-		justify-content: space-around;
-	}
-	
-	.social-stats > *	{
-		display: flex;
-		align-items: center;
-	}
 	/* -----NEW MEMBERS AND RECENT ACTIVITY----- */
-
+	
 	.members-activity	{
 		display: flex;
 		justify-content: space-around;
-		text-align: left;
+		width: 100%;
+		max-width: 1000px;
+		margin: 0 auto;
 	}
-
-	.new-members article,
-	.recent-activity article	{
-		text-align: center;
-		border-bottom: 1px solid #ccc;
+	
+	.members-activity div	{
+		flex: 1 50%;
+	}
+	
+	.members-activity div h2	{
+		border: 1px solid #ccc;
+	}
+	
+	.new-members,
+	.recent-activity	{
+		flex-direction: column;
+		align-items: flex-start;
+	}
+	
+	.new-member-item,
+	.recent-activity-item	{
 		display: flex;
-		align-items: center;
-		align-content: center;
-		text-align: left;
-		padding: 1em;
+		width: 100%;
+		height: 100px;
 	}
-
-	.new-members article h3	{
-		font-size: 1em;
-	}
-
-	.new-members article span,
-	.recent-activity article span	{
-		margin-left: auto;
-	}
-
-	.recent-activity article span	{
-		padding: 10px;
-	}
-
-	.new-members article img,
-	.recent-activity article img	{
-		border-radius: 50%;
-		width: 60px;
+	
+	.new-member-item img,
+	.recent-activity-item img	{
+		width: 100%;
+		max-width: 60px;
 		height: 60px;
+		align-self: center;
+	}
+	
+	
+	.recent-activity-item p,
+	.new-member-item p	{
+		width: 100%;
+		text-align: left;
+	}
+	
+	.new-member-item p a	{
+		display: inline-block;
+	}
+}
+
+@media (min-width: 1080px)	{
+	.message-user-settings	{
+		display: flex;
+		width: 100%;
+		max-width: 1080px;
+		border: none;
+	}
+	
+	.message-user,
+	.settings	{
+		flex: 1 50%;
+		border: none;
 	}
 }
