@@ -110,12 +110,13 @@ nav	{
 	flex: 1;
 	margin: 0;
 	padding: 0;
-	transition: border-bottom .3s, background .4s;
+	transition: .4s;
 }
 
 .link:hover	{
-	border-bottom: 3px solid #eea945;
-	background: #7f9a77;
+	border-radius: 8px;
+	background: #789aaa;
+	transform: scale(1.15);
 }
 
 .link svg	{
@@ -123,6 +124,10 @@ nav	{
 	max-height: 60px;
 	margin: 0;
 	padding: .75em .5em;
+}
+
+.link:hover svg .st0	{
+	fill: yellow;
 }
 
 /* ---- searchbox ----*/
@@ -141,31 +146,33 @@ nav	{
 /* -----ALERTmessage----- */
 
 #alert	{
-	margin: 0 auto;
-	width: 100%;
+	margin: 20px auto;
+	width: 90%;
 	max-width: 1000px;
-}
-
-.alert-box	{
 	background: #9393C6;
-	padding: 8px;
-	margin: 10px;
-	border-radius: 8px;
 	color: #fff;
+	padding: 8px;
+	border-radius: 8px;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 }
 
-.alert-box p	{
-	margin: 0;
+.alert-message	{
+	margin: 10px;
+}
+
+.alert-message span	{
+	font-weight: 600;
+	letter-spacing: 3px;
 }
 
 .cancel-button	{
 	font-size: 1.5em;
 	padding: 6px;
-	border: 2px solid #fff;
-	transition: background .3s, transform .3s;
+	border: 2px solid #000;
+	background: #fff;
+	transition: .3s;
 	width: 40px;
 	text-align: center;
 }
@@ -174,8 +181,21 @@ nav	{
 .cancel-button:active,
 .cancel-button:focus	{
 	background: #000;
-	transform: scale(1.2);
+	color: #fff;
+	transform: scale(1.13);
 }
+
+
+/*---CHARTS---*/
+
+canvas	{
+	width: 100%;
+	max-width: 1000px;
+	margin: 5px auto;
+	padding: 15px;
+}
+
+
 
 /* ----- SOCIAL STATS -----*/
 
@@ -323,7 +343,8 @@ nav	{
 	}
 	
 	.main-navigation	{
-		max-width: 65px;
+		min-width: 70px;
+		max-width: 80px;
 		margin: 0;
 	}
 	
