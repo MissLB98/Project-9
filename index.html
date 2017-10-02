@@ -6,6 +6,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.0/Chart.min.js"></script>
 		<link rel="stylesheet" href="css/normalize.css">
+		<link rel="stylesheet" href="css/toggle-switch.css"/>
 		<link rel="stylesheet" href="css/main.css">
 	</head>
 	
@@ -137,19 +138,36 @@
 				</div>
 				
 				<div class="traffic">
-					<h2>TRAFFIC</h2>
+					<div>
+						<h2>TRAFFIC</h2>
+						<fieldset>
+						  <div class="switch-toggle switch-candy">
+							<input id="week" name="view" type="radio" checked>
+							<label for="week" onclick="">Week</label>
+
+							<input id="month" name="view" type="radio">
+							<label for="month" onclick="">Month</label>
+
+							<input id="day" name="view" type="radio">
+							<label for="day" onclick="">Day</label>
+
+							<a></a>
+						  </div>
+						</fieldset>
+					</div>
+					
 					<canvas id="traffic">TRAFFIC</canvas>
 				</div>
 				
-				<div>
-					<div class="daily-traffic">
+				<div class="daily-traffic-mobile-user">
+					<article class="daily-traffic">
 						<h2>DAILY TRAFFIC</h2>
 						<canvas id="dailyTraffic">DAILY TRAFFIC</canvas>
-					</div>
-					<div class="mobile-users">
+					</article>
+					<article class="mobile-users">
 						<h2>MOBILE USERS</h2>
 						<canvas id="mobileUser">MOBILE USERS</canvas>
-					</div>
+					</article>
 				</div>
 				
 				<h2>SOCIAL STATS</h2>
@@ -303,6 +321,35 @@
 					</div>
 					<div class="settings">
 						<h2>SETTINGS</h2>
+						
+						<label class="switch-light switch-candy" onclick="">
+						  <input type="checkbox">
+
+						  <strong>
+							Send Email Notification
+						  </strong>
+
+						  <span>
+							<span>Off</span>
+							<span>On</span>
+							<a></a>
+						  </span>
+						</label>
+						
+						<label class="switch-light switch-candy" onclick="">
+						  <input type="checkbox">
+
+						  <strong>
+							Send Email Notification
+						  </strong>
+
+						  <span>
+							<span>Off</span>
+							<span>On</span>
+							<a></a>
+						  </span>
+						</label>
+						
 						<select>
 							<option value="timezone">Select Timezone</option>
 						</select><br/>

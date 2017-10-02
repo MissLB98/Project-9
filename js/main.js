@@ -5,13 +5,6 @@ const notifyIcon = document.querySelector('.notification-icon');
 
 //The alert message
 
-document.addEventListener('load', () => {
-	alertBox.innerHTML = `
-		<p class="alert-message"><span>Alert!</span> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellen...</p>
-		<button id="cancel" class="cancel-button">X</button>
-	`;
-});
-
 alertBox.innerHTML = `
 	<p class="alert-message"><span>Alert!</span> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellen...</p>
 	<button id="cancel" class="cancel-button">X</button>
@@ -20,14 +13,13 @@ alertBox.innerHTML = `
 //As long as the alert message is there, the bell svg will have a black border and red background.
 
 if	(alertBox.style.display = 'flex')	{
-	notifyIcon.style.border = '1px solid black';
 	notifyIcon.style.borderRadius = '100%';
 	notifyIcon.style.paddingLeft = '8px';
 	notifyIcon.style.paddingRight = '5px';
 	notifyIcon.style.paddingTop = '5px';
 	notifyIcon.style.paddingBottom = '5px';
 	notifyIcon.style.width = '50px';
-	notifyIcon.style.background = 'darkred';
+	notifyIcon.style.background = 'orange';
 	notifyIcon.style.transition = '.4s';
 }
 
@@ -59,11 +51,24 @@ const lineChart = new Chart(traffic, {
 	data: {
 		labels: ["16-22", "23-29", "30-5", "6-12", "13-19", "20-26", "27-3", "4-10", "11-17", "18-24", "25-31"],
         datasets: [{
-            label: "My First dataset",
-            backgroundColor: 'lightblue',
+            backgroundColor: 'rgba(100, 200, 230, .5)',
             borderColor: '#34a4ee',
             data: [500, 1000, 750, 1250, 1750, 1250, 1500, 1000, 1500, 2250, 1750, 2250],
         }]
+	},
+	options:	{
+		legend: {
+			display: false,
+		},
+		elements:	{
+			point:	{
+				radius: 5
+			},
+			line:	{
+				tension: 0,
+				borderWidth: 1,
+			}
+		}
 	}
 });
 
@@ -77,35 +82,21 @@ const myChart = new Chart(barChart, {
         datasets: [{
             data: [50, 75, 150, 100, 200, 175, 75],
             backgroundColor: [
-                'rgba(255, 99, 132, 0.2)',
-                'rgba(54, 162, 235, 0.2)',
-                'rgba(255, 206, 86, 0.2)',
-                'rgba(75, 192, 192, 0.2)',
-                'rgba(153, 102, 255, 0.2)',
-                'rgba(255, 159, 64, 0.2)',
-				'lightgreen'
-            ],
-            borderColor: [
-                'rgba(255,99,132,1)',
-                'rgba(54, 162, 235, 1)',
-                'rgba(255, 206, 86, 1)',
-                'rgba(75, 192, 192, 1)',
-                'rgba(153, 102, 255, 1)',
-                'rgba(255, 159, 64, 1)',
-				'green'
-            ],
-            borderWidth: 3
+                '#7077A9',
+				'#7272B9',
+				'#7371C9',
+				'#7473D9',
+				'#7174E9',
+				'#7575F9',
+				'#7676C9'
+            ]
         }]
     },
-    options: {
-        scales: {
-            yAxes: [{
-                ticks: {
-                    beginAtZero:false
-                }
-            }]
-        }
-    }
+	options:	{
+		legend: {
+			display: false,
+		}
+	}
 });
 
 //PIE CHART
@@ -113,26 +104,27 @@ const myChart = new Chart(barChart, {
 const pieChart = document.getElementById('mobileUser').getContext('2d');
 
 const myPieChart = new Chart(pieChart, {
-    type: 'pie',
-    datasets: [{
-        data: [10, 200, 300, 40],
-		label: 'the pie',
+    type: 'doughnut',
+    data:	{
+		labels: ['Phones', 'Tablets', 'Desktop'],
+		datasets: [{
+        data: [15, 15, 70],
 		backgroundColor: [
-                'rgba(255, 99, 132, 0.2)',
-                'rgba(54, 162, 235, 0.2)',
-                'rgba(255, 206, 86, 0.2)'],
-		borderColor: [
-                'rgba(255,99,132,1)',
-                'rgba(54, 162, 235, 1)',
-                'rgba(255, 206, 86, 1)',
-                'rgba(75, 192, 192, 1)'],
-		borderWidth: 1,
-    }],
-	labels: [
-        'Red',
-        'Yellow',
-        'Blue'
-    ]
+                '#639ea9',
+                '#75aa62',
+                '#7171C6'],
+		}],
+	},
+	options:	{
+		legend: {
+			position: 'right',
+			labels: {
+				boxWidth: 25,
+				fontSize: 15,
+				padding: 20,
+			}
+		}
+	}
 });
 
 
