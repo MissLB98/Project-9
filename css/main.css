@@ -281,7 +281,8 @@ nav	{
 
 /*The containers for the new members 
 	recent activity.*/
-.new-members,
+	
+/*.new-members,*/
 .recent-activity	{
 	display: flex;
 	flex-wrap: wrap;
@@ -290,24 +291,25 @@ nav	{
 }
 
 /*This is the articles.*/
-.new-member-item,
+
+/*.new-member-item,*/
 .recent-activity-item	{
 	flex: 1 50%;
 	padding: 10px;
 	border: 1px solid #ccc;
 }
 
-.new-member-item img,
+/*.new-member-item img,*/
 .recent-activity-item img	{
 	border-radius: 100%;
 	width: 90px;
 }
 
-.new-member-item p a	{
+/*.new-member-item p a	{
 	display: block;
 	margin: 0 auto;
 	text-decoration: none;
-}
+}*/
 
 .recent-activity-item span	{
 	font-size: 2em;
@@ -466,20 +468,20 @@ nav	{
 		border: 1px solid #ccc;
 	}
 	
-	.new-members,
+	/*.new-members,*/
 	.recent-activity	{
 		flex-direction: column;
 		align-items: flex-start;
 	}
 	
-	.new-member-item,
+	/*.new-member-item,*/
 	.recent-activity-item	{
 		display: flex;
 		width: 100%;
 		height: 100px;
 	}
 	
-	.new-member-item img,
+	/*.new-member-item img,*/
 	.recent-activity-item img	{
 		width: 100%;
 		max-width: 60px;
@@ -488,15 +490,15 @@ nav	{
 	}
 	
 	
-	.recent-activity-item p,
-	.new-member-item p	{
+	.recent-activity-item p
+	/*,.new-member-item p*/	{
 		width: 100%;
 		text-align: left;
 	}
 	
-	.new-member-item p a	{
+	/*.new-member-item p a	{
 		display: inline-block;
-	}
+	}*/
 	
 	/*----SETTINGS-----*/
 	

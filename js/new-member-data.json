@@ -1,26 +1,26 @@
-{
+[
 	{
-		"picture" : "",
-		"name"	  : "",
-		"email"	  : "",
-		"date"	  : ""
+		"picture" : "../img/img1.jpg",
+		"name"	  : "Victoria Chambers",
+		"email"	  : "victoria.chambers80@example.com",
+		"date"	  : "10/15/15"
 	},
 	{
-		"picture" : "",
-		"name"	  : "",
-		"email"	  : "",
-		"date"	  : ""
+		"picture" : "../img/img2.jpg",
+		"name"	  : "Dale Byrd",
+		"email"	  : "dale.byrd52@example.com",
+		"date"	  : "10/15/15"
 	},
 	{
-		"picture" : "",
-		"name"	  : "",
-		"email"	  : "",
-		"date"	  : ""
+		"picture" : "../img/img3.jpg",
+		"name"	  : "Dawn Wood",
+		"email"	  : "dawn.wood16@example.com",
+		"date"	  : "10/15/15"
 	},
 	{
-		"picture" : "",
-		"name"	  : "",
-		"email"	  : "",
-		"date"	  : ""
+		"picture" : "../img/img4.jpg",
+		"name"	  : "Dan Oliver",
+		"email"	  : "dan.oliver82@example.com",
+		"date"	  : "10/15/15"
 	}
-}
+]

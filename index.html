@@ -5,6 +5,7 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.0/Chart.min.js"></script>
+		<script src="js/widget.js"></script>
 		<link rel="stylesheet" href="css/normalize.css">
 		<link rel="stylesheet" href="css/toggle-switch.css"/>
 		<link rel="stylesheet" href="css/main.css">
@@ -171,7 +172,7 @@
 				</div>
 				
 				<h2>SOCIAL STATS</h2>
-				<div class="social-stats">
+				<div id="socialStats">
 					<article class="twitter">
 						<div>
 							<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
@@ -234,42 +235,8 @@
 				<div class="members-activity">
 					<div>
 						<h2>NEW MEMBERS</h2>
-						<div class="new-members">
-							<article class="new-member-item">
-								<img src="img/img1.jpg" alt="new_member"/>
-								<p>
-									<span><b>Victoria Chambers</b></span><br/>
-									<a href="mailto:victoria.chambers80@example.com">victoria.chambers80@example.com</a>
-									<i>10/15/15</i>
-								</p>
-							</article>
-							
-							<article class="new-member-item">
-								<img src="img/img2.jpg" alt="new_member"/>
-								<p>
-									<span><b>Dale Byrd</b></span><br/>
-									<a href="mailto:dale.byrd52@example.com">dale.byrd52@example.com</a>
-									<i>10/15/15</i>
-								</p>
-							</article>
-							
-							<article class="new-member-item">
-								<img src="img/img3.jpg" alt="new_member"/>
-								<p>
-									<span><b>Dawn Wood</b></span><br/>
-									<a href="mailto:dawn.wood16@example.com">dawn.wood16@example.com</a>
-									<i>10/15/15</i>
-								</p>
-							</article>
-							
-							<article class="new-member-item">
-								<img src="img/img4.jpg" alt="new_member"/>
-								<p>
-									<span><b>Dan Oliver</b></span><br/>
-									<a href="mailto:dan.oliver82@example.com">dan.oliver82@example.com</a>
-									<i>10/15/15</i>
-								</p>
-							</article>
+						<div id="newMembers">
+							<!-- DATA ADDED WITH AJAX -->
 						</div>
 					</div>
 					
