@@ -41,6 +41,8 @@ a	{
 	text-decoration: none;
 }
 
+
+
 /*-----HEADER-----*/
 
 header	{
@@ -283,7 +285,10 @@ nav	{
 	recent activity.*/
 	
 /*.new-members,*/
-.recent-activity	{
+
+
+.recent-activity,
+#newMembers {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
@@ -292,7 +297,24 @@ nav	{
 
 /*This is the articles.*/
 
+/*ul*/
+.new-members  {
+  list-style: none;
+  padding: 0;
+  display: flex;
+}
+/*li*/
+.new-members li {
+  padding: 10px;
+}
+
+
 /*.new-member-item,*/
+#newMembers img {
+  border-radius: 50%;
+  width: 90px;
+}
+
 .recent-activity-item	{
 	flex: 1 50%;
 	padding: 10px;
@@ -320,7 +342,7 @@ nav	{
 
 .message-user-settings	{
 	border: 1px solid #ccc;
-	margin: 10px auto;
+	margin: 0 auto;
 }
 
 .message-user,
@@ -488,6 +510,44 @@ nav	{
 		height: 60px;
 		align-self: center;
 	}
+
+  .new-members  {
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+  }
+  /*li*/
+  .new-members li {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: sapce-around;
+    align-items: center;
+    width: 100%;
+    height: 100px;
+    border: 1px solid #ccc;
+  }
+
+  .new-members li div {
+    align-self: center;
+    text-align: left;
+    padding: 5px;
+  }
+
+  .new-members li div p {
+    margin: 0;
+  }
+
+  .new-members li div p span {
+    float: right;
+  }
+
+  #newMembers img {
+    width: 100%;
+    max-width: 60px;
+    height: 60px;
+    align-self: center;
+  }
 	
 	
 	.recent-activity-item p
@@ -496,12 +556,10 @@ nav	{
 		text-align: left;
 	}
 	
-	/*.new-member-item p a	{
-		display: inline-block;
-	}*/
-	
 	/*----SETTINGS-----*/
 	
+  
+
 	.settings	{
 		
 	}

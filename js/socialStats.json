@@ -2,16 +2,16 @@
 	{
 		"icon" : "../icons/icon-twitter.svg",
 		"media" : "Twitter",
-		"status" : 10345
+		"status" : "10345"
 	},
 	{
 		"icon" : "../icons/icon-facebook.svg",
 		"media" : "Facebook",
-		"status" : 8739
+		"status" : "8739"
 	},
 	{
 		"icon" : "../icons/icon-google-plus.svg",
 		"media" : "Google+",
-		"status" : 2530
+		"status" : "2530"
 	}
 ]
