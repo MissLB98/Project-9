@@ -230,64 +230,36 @@ nav	{
 
 /* SOCIAL-STATS -----*/
 	
-.social-stats	{
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-around;
+.social-stats {
+  display: flex;
+  justify-content: space-around;
+  padding: 10px 0;
+  margin: 0 auto;
+  list-style: none;
 }
 
-.social-stats > *	{
-	display: flex;
-	align-items: center;
+.social-stats li  {
+  align-self: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  outline: 1px solid #ccc;
+  margin: 5px;
+  padding: 10px;
+  max-width: 300px;
 }
 
-.social-stats h3	{
-	margin: 0;
-	padding: 0;
-	font-size: 1.3em;
+.social-stats li img  {
+  width: 100%;
+  max-width: 100px;
+  margin: 10px;
 }
-
-.twitter,
-.facebook,
-.google	{
-	margin: 5px;
-	padding: 5px;
-	text-align: center;
-	border: 1px solid #ccc;
-	border-radius: 8px;
-}
-
-.twitter div:first-child,
-.facebook div:first-child,
-.google div:first-child	{
-	width: 80px;
-}
-
-.twitter div span,
-.facebook div span,
-.google div span	{
-	font-size: 1.65em;
-}
-
-.twitter div svg,
-.facebook div svg,
-.google div svg	{
-	width: 100%;
-	height: 100%;
-	fill: #5656aa;
-}
-
 
 
 /* -----NEW MEMBERS AND RECENT ACTIVITY----- */
 
-/*The containers for the new members 
-	recent activity.*/
-	
-/*.new-members,*/
 
-
-.recent-activity,
 #newMembers {
 	display: flex;
 	flex-wrap: wrap;
@@ -295,48 +267,24 @@ nav	{
 	text-align: center;
 }
 
-/*This is the articles.*/
-
-/*ul*/
 .new-members  {
   list-style: none;
   padding: 0;
   display: flex;
+  flex-wrap: wrap;
 }
-/*li*/
+
 .new-members li {
   padding: 10px;
+  flex: 1;
 }
 
 
-/*.new-member-item,*/
-#newMembers img {
+.new-members li img {
   border-radius: 50%;
   width: 90px;
 }
 
-.recent-activity-item	{
-	flex: 1 50%;
-	padding: 10px;
-	border: 1px solid #ccc;
-}
-
-/*.new-member-item img,*/
-.recent-activity-item img	{
-	border-radius: 100%;
-	width: 90px;
-}
-
-/*.new-member-item p a	{
-	display: block;
-	margin: 0 auto;
-	text-decoration: none;
-}*/
-
-.recent-activity-item span	{
-	font-size: 2em;
-	margin-left: auto;
-}
 
 /* -----MESSAGE USER AND SETTINGS -----*/
 
@@ -472,14 +420,26 @@ nav	{
 		max-width: 450px;
 	}
 	
+  /*----- SOCIAL STATUS -----*/
+
+  .social-stats li {
+    flex-direction: row;
+  }
+
+  .social-stats li div {
+    display: flex;
+    flex-direction: column;
+    font-size: 1.3em;
+  }
+
+
 	/* -----NEW MEMBERS AND RECENT ACTIVITY----- */
 	
 	.members-activity	{
 		display: flex;
 		justify-content: space-around;
 		width: 100%;
-		max-width: 1000px;
-		margin: 0 auto;
+		margin: auto;
 	}
 	
 	.members-activity div	{
@@ -490,34 +450,13 @@ nav	{
 		border: 1px solid #ccc;
 	}
 	
-	/*.new-members,*/
-	.recent-activity	{
-		flex-direction: column;
-		align-items: flex-start;
-	}
-	
-	/*.new-member-item,*/
-	.recent-activity-item	{
-		display: flex;
-		width: 100%;
-		height: 100px;
-	}
-	
-	/*.new-member-item img,*/
-	.recent-activity-item img	{
-		width: 100%;
-		max-width: 60px;
-		height: 60px;
-		align-self: center;
-	}
-
   .new-members  {
     flex-direction: column;
     margin: 0;
     padding: 0;
     width: 100%;
   }
-  /*li*/
+
   .new-members li {
     display: flex;
     flex-wrap: wrap;
@@ -542,19 +481,13 @@ nav	{
     float: right;
   }
 
-  #newMembers img {
+  .new-members li img {
     width: 100%;
     max-width: 60px;
     height: 60px;
     align-self: center;
   }
 	
-	
-	.recent-activity-item p
-	/*,.new-member-item p*/	{
-		width: 100%;
-		text-align: left;
-	}
 	
 	/*----SETTINGS-----*/
 	
