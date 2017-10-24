@@ -105,7 +105,9 @@
 						viewBox="0 0 32 32" style="enable-background:new 0 0 32 32;" xml:space="preserve">
 						
 							<style type="text/css">
-								.st0{fill:#fff;}
+								.st0  {
+                  fill: #fff;
+                }
 							</style>
 							
 							<g id="_x32__16_">
@@ -134,28 +136,12 @@
 				
 				<div>				
 					<div id="alert">
+            <!-- THIS WILL BE FOR THE ALERT BOX. ITS MADE WITH JS. -->
 					</div>
 				</div>
 				
 				<div class="traffic">
-					<div>
-						<h2>TRAFFIC</h2>
-						<fieldset>
-						  <div class="switch-toggle switch-candy">
-							<input id="week" name="view" type="radio" checked>
-							<label for="week" onclick="">Week</label>
-
-							<input id="month" name="view" type="radio">
-							<label for="month" onclick="">Month</label>
-
-							<input id="day" name="view" type="radio">
-							<label for="day" onclick="">Day</label>
-
-							<a></a>
-						  </div>
-						</fieldset>
-					</div>
-					
+          <h2>TRAFFIC</h2>
 					<canvas id="traffic">TRAFFIC</canvas>
 				</div>
 				
@@ -185,7 +171,7 @@
 					
 					<div>
 						<h2>RECENT ACTIVITY</h2>
-						<div id="recent-activity">
+						<div id="recentActivity">
                <!--	DATA ADDED WITH AJAX-->
 						</div>
 					</div>
@@ -197,31 +183,40 @@
 						<input type="search" name="user_searchbox" aria-label="Search" placeholder="Search for Users"/><br/>
 						<textarea placeholder="Message for User">
 						</textarea><br/>
-						<button type="submit" name="send">SEND</button>
+						<button id="sendButton" type="submit" name="send">SEND</button>
 					</div>
+          
+          
 					<div class="settings">
 						<h2>SETTINGS</h2>
 						
-						<strong>Send Email Notification</strong>
-						<label class="switch-light switch-candy" onclick="">
-							<input type="checkbox">
-							<span>
-							<span>Off</span>
-							<span>On</span>
-							<a></a>
-							</span>
-						</label>
+            <label class="switch-light switch-material" onclick="">
+              <input type="checkbox">
+            
+              <strong>
+                Send Email Notification
+              </strong>
+            
+              <span class="switchOnOff">
+                <span>Off</span>
+                <span>On</span>
+                <a></a>
+              </span>
+            </label>
 						
-						<strong>Send Email Notification</strong>
-						<label class="switch-light switch-candy" onclick="">
-							
-							<input type="checkbox">
-							<span>
-							<span>Off</span>
-							<span>On</span>
-							<a></a>
-							</span>
-						</label>
+            <label class="switch-light switch-material" onclick="">
+              <input type="checkbox">
+            
+              <strong>
+                Set Profile to Public
+              </strong>
+            
+              <span class="switchOnOff">
+                <span>Off</span>
+                <span>On</span>
+                <a></a>
+              </span>
+            </label>
 						
 						<select>
 							<option value="selectTimezone" selected hidden disabled>Select Timezone</option>

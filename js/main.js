@@ -19,7 +19,7 @@ if	(alertBox.style.display = 'flex')	{
 	notifyIcon.style.paddingTop = '5px';
 	notifyIcon.style.paddingBottom = '5px';
 	notifyIcon.style.width = '50px';
-	notifyIcon.style.background = 'orange';
+	notifyIcon.style.background = '#000';
 	notifyIcon.style.transition = '.4s';
 }
 
@@ -38,7 +38,7 @@ alertBox.addEventListener('click', (event) => {
 		notifyIcon.style.paddingBottom = '0';
 		notifyIcon.style.marginRight = '10px';
 		notifyIcon.style.width = '35px';
-		notifyIcon.style.background = '#7171C6';
+		notifyIcon.style.background = '#4578ff';
 	}
 });
 
@@ -126,4 +126,3 @@ const myPieChart = new Chart(pieChart, {
 		}
 	}
 });
-

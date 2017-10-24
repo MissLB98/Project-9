@@ -4,7 +4,7 @@
 *::after, 
 *::before	{
 	box-sizing: border-box;
-	/*border: 1px solid red;*/
+/*	border: 1px solid red;*/
 }
 
 body	{
@@ -51,7 +51,7 @@ header	{
 	align-items: center;
 	position: relative;
 	margin: 0 auto;
-	background: #7171C6;
+	background: #4578ff;
 	height: 60px;
 	width: 100%;
 	padding: 0 .5em;
@@ -108,7 +108,7 @@ h1.app-name span	{
 .main-navigation	{
 	margin: 0 auto;
 	padding: 0;
-	background: #42426F;
+	background: #3456ae;
 }
 
 nav	{
@@ -161,7 +161,7 @@ nav	{
 	margin: 20px auto;
 	width: 90%;
 	max-width: 1000px;
-	background: #9393C6;
+	background: linear-gradient(to top, #34aaff, #3488aa);
 	color: #fff;
 	padding: 8px;
 	border-radius: 8px;
@@ -233,9 +233,11 @@ nav	{
 .social-stats {
   display: flex;
   justify-content: space-around;
+  flex-wrap: wrap;
   padding: 10px 0;
   margin: 0 auto;
   list-style: none;
+  width: 100%;
 }
 
 .social-stats li  {
@@ -257,32 +259,76 @@ nav	{
 }
 
 
+.social-stats li div {
+  display: flex;
+  flex-direction: column;
+  font-size: 1.3em;
+}
+
+
 /* -----NEW MEMBERS AND RECENT ACTIVITY----- */
 
 
-#newMembers {
+#newMembers,
+#recentActivity {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
 	text-align: center;
 }
 
-.new-members  {
+.new-members,
+.recent-activity  {
   list-style: none;
+  margin: 0;
   padding: 0;
   display: flex;
   flex-wrap: wrap;
 }
 
-.new-members li {
+.new-members li,
+.recent-activity li  {
   padding: 10px;
   flex: 1;
 }
 
+.new-members li div {
+  padding: 8px;
+}
 
-.new-members li img {
+.new-members li img,
+.recent-activity li img {
   border-radius: 50%;
   width: 90px;
+}
+
+.new-members li div p {
+  margin: 0 auto;
+}
+
+.new-members li div p a {
+  display: block;
+}
+
+.recent-activity li div p {
+  margin: 0;
+  padding: 8px;
+  width: 100%;
+  display: flex;
+  text-align: left;
+}
+
+.recent-activity li:hover div p a {
+  color: #45aa99;
+  font-weight: 700;
+}
+
+.arrow  {
+  margin-left: auto;
+  padding: 5px 10px;
+  font-size: 2em;
+  color: #aaa;
+  transition: color .3s;
 }
 
 
@@ -291,6 +337,7 @@ nav	{
 .message-user-settings	{
 	border: 1px solid #ccc;
 	margin: 0 auto;
+  width: 100%;
 }
 
 .message-user,
@@ -304,7 +351,7 @@ nav	{
 	width: 100%;
 	max-width: 500px;
 	padding: 10px 15px;
-	margin-bottom: 15px;
+	margin: 10px auto;
 	border-radius: 5px;
 	border: 1px solid #ccc;
 }
@@ -316,6 +363,8 @@ nav	{
 	color: black;
 	border: 1px solid #ccc;
 	border-radius: 5px;
+  margin: 10px;
+  padding: 15px;
 }
 
 .message-user button,
@@ -332,6 +381,21 @@ nav	{
 
 .settings	{
 	border-top: 1px solid #ccc;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.switch-light {
+  display: flex;
+  margin: 10px auto;
+  padding: 10px;
+  font-weight: 600;
+  width: 100%;
+  max-width: 450px;
+}
+
+.switchOnOff  {
+  margin-left: auto;
 }
 
 .settings button[type="reset"]	{
@@ -344,7 +408,6 @@ nav	{
 	border-radius: 8px;
 	border: none;
 }
-
 
 
 /*-----MEDIA QUERIES-----*/
@@ -426,12 +489,6 @@ nav	{
     flex-direction: row;
   }
 
-  .social-stats li div {
-    display: flex;
-    flex-direction: column;
-    font-size: 1.3em;
-  }
-
 
 	/* -----NEW MEMBERS AND RECENT ACTIVITY----- */
 	
@@ -450,71 +507,66 @@ nav	{
 		border: 1px solid #ccc;
 	}
 	
-  .new-members  {
+  .new-members,
+  .recent-activity  {
     flex-direction: column;
-    margin: 0;
-    padding: 0;
     width: 100%;
   }
 
-  .new-members li {
+  .new-members li,
+  .recent-activity li {
     display: flex;
     flex-wrap: wrap;
-    justify-content: sapce-around;
+    justify-content: space-around;
     align-items: center;
     width: 100%;
     height: 100px;
     border: 1px solid #ccc;
+    transition: border-bottom .3s;
+  }
+  
+  .new-members li:hover,
+  .recent-activity li:hover {
+    cursor: pointer;
+    border-bottom: 1px solid #45aa99;
   }
 
-  .new-members li div {
-    align-self: center;
-    text-align: left;
-    padding: 5px;
-  }
-
-  .new-members li div p {
-    margin: 0;
-  }
-
-  .new-members li div p span {
-    float: right;
-  }
-
-  .new-members li img {
+  .new-members li img,
+  .recent-activity li img {
     width: 100%;
     max-width: 60px;
     height: 60px;
     align-self: center;
   }
-	
-	
-	/*----SETTINGS-----*/
-	
+
+  .new-members li div {
+    text-align: left;
+  }
   
 
-	.settings	{
-		
-	}
-	
-	.switch-light	{
-		width: 100%;
-		max-width: 300px;
-	}
-	
+  .new-members li div p a {
+    display: inline-block;
+  }
+
+  .new-members li div p span {
+    float: right;
+  }
 }
+
 
 @media (min-width: 1080px)	{
 	.message-user-settings	{
 		display: flex;
 		width: 100%;
-		max-width: 1080px;
-		border: none;
 	}
 	
+  .message-user {
+    margin: 0;
+  }
+
 	.message-user,
 	.settings	{
-		flex: 1 50%;
-		border: none;
+		flex: 1;
+    border: 1px solid #ccc;
 	}
 }
