@@ -141,7 +141,23 @@
 				</div>
 				
 				<div class="traffic">
+          <div>
           <h2>TRAFFIC</h2>
+            <fieldset>
+              <div class="switch-toggle switch-ios">
+                <input id="week" name="view" type="radio" checked>
+                <label for="week" onclick="">Week</label>
+            
+                <input id="month" name="view" type="radio">
+                <label for="month" onclick="">Month</label>
+            
+                <input id="day" name="view" type="radio">
+                <label for="day" onclick="">Day</label>
+            
+                <a></a>
+              </div>
+            </fieldset>
+          </div>
 					<canvas id="traffic">TRAFFIC</canvas>
 				</div>
 				
@@ -158,21 +174,21 @@
 				
 				<h2>SOCIAL STATS</h2>
 				<div id="socialStats">
-					<!--- DATA ADDED WITH AJAX --->
+					<!--- DATA ADDED WITH JS --->
 				</div>
 				
 				<div class="members-activity">
 					<div>
 						<h2>NEW MEMBERS</h2>
 						<div id="newMembers">
-							<!-- DATA ADDED WITH AJAX -->
+							<!-- DATA ADDED WITH JS -->
 						</div>
 					</div>
 					
 					<div>
 						<h2>RECENT ACTIVITY</h2>
 						<div id="recentActivity">
-               <!--	DATA ADDED WITH AJAX-->
+               <!--	DATA ADDED WITH JS-->
 						</div>
 					</div>
 				</div>
@@ -259,7 +275,7 @@
 				
 			</main>
 		</div>
-		<script src="js/widget.js"></script>
+		<!--<script src="js/widget.js"></script>-->
 		<script src="js/main.js"></script>
 	</body>
 </html>

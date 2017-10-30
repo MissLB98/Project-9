@@ -126,3 +126,146 @@ const myPieChart = new Chart(pieChart, {
 		}
 	}
 });
+
+
+///////WIDGETS////////WIDGETS///////////WIDGETS////////////>
+
+
+//SOCIAL STATS-------------
+
+const stats = [
+	{
+		"icon" : "../icons/icon-twitter.svg",
+		"media" : "Twitter",
+		"status" : 10345
+	},
+	{
+		"icon" : "../icons/icon-facebook.svg",
+		"media" : "Facebook",
+		"status" : 8739
+	},
+	{
+		"icon" : "../icons/icon-google-plus.svg",
+		"media" : "Google+",
+		"status" : 2530
+	}
+];
+
+
+let socialHTML = '<ul class="social-stats">';
+for (let i = 0; i < stats.length; i += 1)	{
+  socialHTML += "<li>";
+    socialHTML += '<img src="' + stats[i].icon + '" alt="icon">';
+    socialHTML += '<div>';
+      socialHTML += '<span><b>' + stats[i].media + '</b></span>';
+      socialHTML += '<span>' + stats[i].status + '</span>';
+    socialHTML += '</div>';
+  socialHTML += '</li>';
+}
+socialHTML += '</ul>';
+document.getElementById('socialStats').innerHTML = socialHTML;
+
+
+
+//NEW MEMBERS--------------
+
+const members = [
+	{
+		"picture" : "../img/img1.jpg",
+		"name"	  : "Victoria Chambers",
+		"email"	  : "victoria.chambers80@example.com",
+		"date"	  : "10/15/15"
+	},
+	{
+		"picture" : "../img/img2.jpg",
+		"name"	  : "Dale Byrd",
+		"email"	  : "dale.byrd52@example.com",
+		"date"	  : "10/15/15"
+	},
+	{
+		"picture" : "../img/img3.jpg",
+		"name"	  : "Dawn Wood",
+		"email"	  : "dawn.wood16@example.com",
+		"date"	  : "10/15/15"
+	},
+	{
+		"picture" : "../img/img4.jpg",
+		"name"	  : "Dan Oliver",
+		"email"	  : "dan.oliver82@example.com",
+		"date"	  : "10/15/15"
+	}
+];
+
+
+let memberHTML = '<ul class="new-members">';
+for (let i = 0; i < members.length; i += 1) {
+  memberHTML += '<li>';
+    memberHTML += '<img src="' + members[i].picture + '" alt="new member">';
+    memberHTML += '<div>';
+      memberHTML += '<span><b>' + members[i].name;
+      memberHTML += '</b></span>';
+      memberHTML += '<p>';
+        memberHTML += '<a href="mailto:';
+          memberHTML += members[i].email + '">';
+          memberHTML += members[i].email;
+        memberHTML += '</a>';
+        memberHTML += '<span>';
+        memberHTML += members[i].date;
+        memberHTML += '</span>';
+      memberHTML += '</p>';
+    memberHTML += '</div>';
+  memberHTML += '</li>';
+}
+memberHTML += '</ul>';
+document.getElementById('newMembers').innerHTML = memberHTML;
+
+
+
+//RECENT ACTIVITY------------
+
+document.getElementById('recentActivity').innerHTML = `
+  <ul class="recent-activity">
+  <li>
+    <img src="./img/img1.jpg" alt="recent-activity"/>
+    <div>
+      <p>
+        <span><b>Victoria Chambers</b> commented on YourApp's SEO Tips. <i>4 hours ago</i></span>
+        <a href="#" class="arrow">&rsaquo;</a>
+      </p>
+    </div>
+  </li>
+  <li>
+    <img src="./img/img2.jpg" alt="recent-activity"/>
+    <div>
+      <p>
+        <span><b>Dale Byrd</b> liked the post Facebook's Changes for 2016. <i>5 hours ago</i></span>
+        <a href="" class="arrow">&rsaquo;</a>
+      </p>
+    </div>
+  </li>
+  <li>
+    <img src="./img/img3.jpg" alt="recent-activity"/>
+    <div>
+      <p>
+        <span><b>Dawn Wood</b> commented on Facebook's Changes for 2016. <i>5 hours ago</i></span>
+        <a href="#" class="arrow">&rsaquo;</a>
+      </p>
+    </div>
+  </li>
+  <li>
+    <img src="./img/img4.jpg" alt="recent-activity"/>
+    <div>
+      <p>
+        <span><b>Dan Oliver</b> posted YourApp's SEO Tips. <i>1 day ago</i></span>
+        <a href="#" class="arrow">&rsaquo;</a>
+      </p>
+    </div>
+  </li>
+</ul>
+`;
+
+
+
+
+
+
