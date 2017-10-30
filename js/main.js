@@ -222,6 +222,47 @@ document.getElementById('newMembers').innerHTML = memberHTML;
 
 
 //RECENT ACTIVITY------------
+/*const activity = [
+  {
+    "img" : "./img/img1.jpg",
+    "name" : "Victoria Chambers",
+    "sentence" : " commented on YourApp's SEO Tips. <i>4 hours ago</i>",
+    "arrow" : "&rsaquo;"
+  },
+  {
+    "img" : "./img/img2.jpg",
+    "name" : "Dale Byrd",
+    "sentene" : " like the post Facebook's Changes for 2016. <i>5 hours ago</i>",
+    "arrow" : "&rsaquo;"
+  },
+  {
+    "img" : "./img/img3.jpg",
+    "name" : "Dawn Wood",
+    "sentene" : " commented on Facebook's Changes for 2016. <i>5 hours ago</i>",
+    "arrow" : "&rsaquo;"
+  },
+  {
+    "img" : "./img/img4.jpg",
+    "name" : "Dan Oliver",
+    "sentene" : " posted YourApp's SEO Tips. <i>1 day ago</i>",
+    "arrow" : "&rsaquo;"
+  }
+];
+
+
+let activityHTML = '<ul class="recent-activity">';
+for (let i = 0; i < activity.length; i += 1)  {
+  activityHTML += '<li>';
+	activityHTML += '<img src="' + activity[i].img + '" alt="member activity">';
+	activityHTML += '<p><b>' + activity[i].name + '</b>';
+	activityHTML += activity[i].sentence + '</p>';
+	activityHTML += '<a href="#"><span>' + activity[i].arrow + '</span></a>';
+  activityHTML += '</li>';
+}
+activityHTML = '</ul>';
+document.getElementById('recent-activity').innerHTML = activityHTML;
+*/
+
 
 document.getElementById('recentActivity').innerHTML = `
   <ul class="recent-activity">
