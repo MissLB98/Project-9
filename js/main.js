@@ -135,17 +135,17 @@ const myPieChart = new Chart(pieChart, {
 
 const stats = [
 	{
-		"icon" : "../icons/icon-twitter.svg",
+		"icon" : "./icons/icon-twitter.svg",
 		"media" : "Twitter",
 		"status" : 10345
 	},
 	{
-		"icon" : "../icons/icon-facebook.svg",
+		"icon" : "./icons/icon-facebook.svg",
 		"media" : "Facebook",
 		"status" : 8739
 	},
 	{
-		"icon" : "../icons/icon-google-plus.svg",
+		"icon" : "./icons/icon-google-plus.svg",
 		"media" : "Google+",
 		"status" : 2530
 	}
@@ -171,25 +171,25 @@ document.getElementById('socialStats').innerHTML = socialHTML;
 
 const members = [
 	{
-		"picture" : "../img/img1.jpg",
+		"picture" : "./img/img1.jpg",
 		"name"	  : "Victoria Chambers",
 		"email"	  : "victoria.chambers80@example.com",
 		"date"	  : "10/15/15"
 	},
 	{
-		"picture" : "../img/img2.jpg",
+		"picture" : "./img/img2.jpg",
 		"name"	  : "Dale Byrd",
 		"email"	  : "dale.byrd52@example.com",
 		"date"	  : "10/15/15"
 	},
 	{
-		"picture" : "../img/img3.jpg",
+		"picture" : "./img/img3.jpg",
 		"name"	  : "Dawn Wood",
 		"email"	  : "dawn.wood16@example.com",
 		"date"	  : "10/15/15"
 	},
 	{
-		"picture" : "../img/img4.jpg",
+		"picture" : "./img/img4.jpg",
 		"name"	  : "Dan Oliver",
 		"email"	  : "dan.oliver82@example.com",
 		"date"	  : "10/15/15"
