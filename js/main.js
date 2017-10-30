@@ -222,7 +222,11 @@ document.getElementById('newMembers').innerHTML = memberHTML;
 
 
 //RECENT ACTIVITY------------
-/*const activity = [
+
+
+/* THIS IS ANOTHER OPTION TO PRINTING THE DATA
+
+const activity = [
   {
     "img" : "./img/img1.jpg",
     "name" : "Victoria Chambers",
