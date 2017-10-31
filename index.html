@@ -195,15 +195,30 @@
 				
 				<div class="message-user-settings">
 					<div class="message-user">
+					
+					
             <div id="pop-up">
               <!--added with js-->
             </div>
-						<h2>MESSAGE USER</h2>
+			
+			
+			<h2>MESSAGE USER</h2>
             <div role="form">
-              <input id="users" type="search" name="user_searchbox" aria-label="Search" placeholder="Search for Users"/><br/>
-              <textarea id="messageInput" placeholder="Message for User">
-              </textarea><br/>
-              <input id="sendButton" name="send_button" type="submit" value="SEND"/>
+				<input id="users" type="search" name="user_searchbox" aria-label="Search" placeholder="Search for Users" autocomplete="on" list="people"/><br/>
+			  
+				  <datalist id="people">
+					<option>Zaakira</option>
+					<option>Caleb</option>
+					<option>Mark</option>
+					<option>Hilda</option>
+					<option>Isabella</option>
+					<option>Christian</option>
+				</datalist>
+			  
+			  
+				<textarea id='messageInput' name='userMessage' placeholder='Message' ></textarea>
+				<input id="sendButton" name="send_button" type="submit" value="SEND"/>
+			  
             </div>
 					</div>
           

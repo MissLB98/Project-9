@@ -314,6 +314,7 @@ document.getElementById('recentActivity').innerHTML = `
 
 const sendButton = document.getElementById('sendButton');
 
+
 function cancelPopUp()  {
   const cancelPopUp = document.getElementById("cancelPopUp");
   cancelPopUp.addEventListener('click', () => {
@@ -327,28 +328,29 @@ SUCCESS MESSAGE TO PRINT.*/
 };
 
 sendButton.addEventListener('click', () => {
-  let users = document.getElementById('users');
-  let inputMessage = document.getElementById('messageInput');
+	let users = document.getElementById('users').value;
+	let inputMessage = document.getElementById('messageInput').value;
 
-  if (users.value == '' || inputMessage.value == '') {
-    const errorDiv = document.createElement('div');
-    const container = document.querySelector('#pop-up');
-    errorDiv.className = 'popUpDiv';
-    errorDiv.innerHTML = `
-      <h1>Error! You forgot to fill something in.</h1> 
-      <span id="cancelPopUp">X</span>
-    `;
-    container.appendChild(errorDiv);
-    cancelPopUp();
-  } else  {
-    const popUpDiv = document.createElement('div');
-    const container = document.querySelector('#pop-up');
-    popUpDiv.className = 'popUpDiv';
-    popUpDiv.innerHTML = `<h1>Message Sent!</h1> 
-                          <span id="cancelPopUp">X</span>`;
-    container.appendChild(popUpDiv);
-    cancelPopUp();
-  }
+	if (users == "" || inputMessage == "") {
+		const errorDiv = document.createElement('div');
+		const container = document.querySelector('#pop-up');
+		errorDiv.className = 'popUpDiv';
+		errorDiv.innerHTML = `
+		  <h1>Error! You forgot to fill something in.</h1> 
+		  <span id="cancelPopUp">X</span>
+		`;
+		container.appendChild(errorDiv);
+		cancelPopUp();
+	} else	{
+		const popUpDiv = document.createElement('div');
+		const container = document.querySelector('#pop-up');
+		popUpDiv.className = 'popUpDiv';
+		popUpDiv.innerHTML = `<h1>Message Sent!</h1> 
+							  <span id="cancelPopUp">X</span>`;
+		container.appendChild(popUpDiv);
+		cancelPopUp();
+	}
+	
 });
 
 
