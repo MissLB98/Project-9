@@ -444,8 +444,9 @@ div[role="form"]	{
 	border-radius: 8px;
 	display: flex;
 	justify-content: space-between;
-	transition:: all .4s;
+	transition: .4s;
 }
+
 
 .popUpDiv h1 {
 	color: white;
