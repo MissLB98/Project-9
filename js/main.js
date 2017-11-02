@@ -334,7 +334,7 @@ sendButton.addEventListener('click', (e) => {
 		cancelPopUp.addEventListener('click', () => {
 			errorDiv.style.display = 'none';
 		});*/
-		swal('NO!', 'You have to fill all the fields in.', 'error');
+		swal('NO!', 'You have to fill in all the fields.', 'error');
 	} else	{
 		/*const popUpDiv = document.createElement('div');
 		const cancelPopUp = document.getElementById("cancelPopUp");
