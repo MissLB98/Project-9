@@ -196,17 +196,15 @@
 				<div class="message-user-settings">
 					<div class="message-user">
 					
-					
 						<div id="pop-up">
 						  <!--added with js-->
 						</div>
 						
-						
 						<h2>MESSAGE USER</h2>
-						<div role="form">
+						<form id="messageUser" action="index.html" method="get">
 							<input id="users" type="search" name="user_searchbox" aria-label="Search" placeholder="Search for Users" autocomplete="on" list="people"/><br/>
 						  
-							  <datalist id="people">
+							<datalist id="people">
 								<option>Zaakira</option>
 								<option>Caleb</option>
 								<option>Mark</option>
@@ -215,15 +213,14 @@
 								<option>Christian</option>
 							</datalist>
 						  
-						  
 							<textarea id='messageInput' name='userMessage' placeholder='Message' ></textarea>
-							<input id="sendButton" name="send_button" type="submit" value="SEND"/>
-						  
-						</div>
+							
+							<button id="sendButton" name="send_button" type="submit">SEND</button>
+						</form>
 					</div>
           
           
-					<div class="settings">
+					<form actio="index.html" method="get" class="settings">
 						<h2>SETTINGS</h2>
 						
 						<label class="switch-light switch-material" onclick="">
@@ -290,7 +287,7 @@
 						</select><br/>
 						<button type="submit">SAVE</button>
 						<button type="reset">CANCEL</button>
-					</div>
+					</form>
 				</div>
 				
 			</main>

@@ -314,43 +314,43 @@ document.getElementById('recentActivity').innerHTML = `
 
 const sendButton = document.getElementById('sendButton');
 
-
-function cancelPopUp()  {
-  const cancelPopUp = document.getElementById("cancelPopUp");
-  cancelPopUp.addEventListener('click', () => {
-//    const container = document.querySelector('#pop-up');
-////    container.style.display = 'none';
-/* I FELT THAT IT WAS BETTER TO HAVE THE PAGE RELOAD BECAUSE AFTER YOU
-CLICKED THE 'X' WITH THE 'DISPLAY=NONE' METHOD IT DID NOT ALLOW THE
-SUCCESS MESSAGE TO PRINT.*/
-     location.reload();
-  });
-};
-
-sendButton.addEventListener('click', () => {
-	let users = document.getElementById('users').value;
-	let inputMessage = document.getElementById('messageInput').value;
+sendButton.addEventListener('click', (e) => {
+	e.preventDefault();
+	const users = document.getElementById('users').value;
+	const inputMessage = document.getElementById('messageInput').value;
 
 	if (users == "" || inputMessage == "") {
-		const errorDiv = document.createElement('div');
-		const container = document.querySelector('#pop-up');
+		/*const errorDiv = document.createElement('div');
+		const cancelPopUp = document.getElementById("cancelPopUp");
 		errorDiv.className = 'popUpDiv';
+		
 		errorDiv.innerHTML = `
-		  <h1>Error! You forgot to fill something in.</h1> 
-		  <span id="cancelPopUp">X</span>
+			<h1>Error! You forgot to fill something in.</h1> 
+			<span id="cancelPopUp">X</span>
 		`;
+		
 		container.appendChild(errorDiv);
-		cancelPopUp();
+		
+		cancelPopUp.addEventListener('click', () => {
+			errorDiv.style.display = 'none';
+		});*/
+		alert('Error! You forgot to fill something in.');
 	} else	{
-		const popUpDiv = document.createElement('div');
+		/*const popUpDiv = document.createElement('div');
+		const cancelPopUp = document.getElementById("cancelPopUp");
 		const container = document.querySelector('#pop-up');
 		popUpDiv.className = 'popUpDiv';
-		popUpDiv.innerHTML = `<h1>Message Sent!</h1> 
-							  <span id="cancelPopUp">X</span>`;
+		popUpDiv.innerHTML = `
+			<h1>Message Sent!</h1> 
+			<span id="cancelPopUp">X</span>
+		`;				  
 		container.appendChild(popUpDiv);
-		cancelPopUp();
+		
+		cancelPopUp.addEventListener('click', () => {
+			container.style.display = 'none';
+		});*/
+		alert("Message Sent!");
 	}
-	
 });
 
 

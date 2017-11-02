@@ -432,9 +432,6 @@ div[role="form"]	{
 }
 
 .popUpDiv {
-	position: absolute;
-	top: 30%;
-	right: 30%;
 	background: linear-gradient(to top, #34aaff, #3488aa);
 	color: white;
 	width: 100%;
