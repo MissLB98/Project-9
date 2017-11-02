@@ -334,7 +334,7 @@ sendButton.addEventListener('click', (e) => {
 		cancelPopUp.addEventListener('click', () => {
 			errorDiv.style.display = 'none';
 		});*/
-		alert('Error! You forgot to fill something in.');
+		swal('NO!', 'You have to fill all the fields in.', 'error');
 	} else	{
 		/*const popUpDiv = document.createElement('div');
 		const cancelPopUp = document.getElementById("cancelPopUp");
@@ -349,7 +349,7 @@ sendButton.addEventListener('click', (e) => {
 		cancelPopUp.addEventListener('click', () => {
 			container.style.display = 'none';
 		});*/
-		alert("Message Sent!");
+		swal("YES!", 'Message Sent', 'success');
 	}
 });
 
