@@ -320,35 +320,8 @@ sendButton.addEventListener('click', (e) => {
 	const inputMessage = document.getElementById('messageInput').value;
 
 	if (users == "" || inputMessage == "") {
-		/*const errorDiv = document.createElement('div');
-		const cancelPopUp = document.getElementById("cancelPopUp");
-		errorDiv.className = 'popUpDiv';
-		
-		errorDiv.innerHTML = `
-			<h1>Error! You forgot to fill something in.</h1> 
-			<span id="cancelPopUp">X</span>
-		`;
-		
-		container.appendChild(errorDiv);
-		
-		cancelPopUp.addEventListener('click', () => {
-			errorDiv.style.display = 'none';
-		});*/
 		swal('NO!', 'You have to fill in all the fields.', 'error');
 	} else	{
-		/*const popUpDiv = document.createElement('div');
-		const cancelPopUp = document.getElementById("cancelPopUp");
-		const container = document.querySelector('#pop-up');
-		popUpDiv.className = 'popUpDiv';
-		popUpDiv.innerHTML = `
-			<h1>Message Sent!</h1> 
-			<span id="cancelPopUp">X</span>
-		`;				  
-		container.appendChild(popUpDiv);
-		
-		cancelPopUp.addEventListener('click', () => {
-			container.style.display = 'none';
-		});*/
 		swal("YES!", 'Message Sent', 'success');
 	}
 });
